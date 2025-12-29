@@ -1,0 +1,5 @@
+# Dependencies that need to be migrated to version 19.0
+odoo-addon-contract-line-successor @ git+https://github.com/OCA/contract@refs/pull/1370/head##subdirectory=contract_line_successor
+odoo-addon-contract @ git+https://github.com/OCA/contract@refs/pull/1312/head#subdirectory=contract
+odoo-addon-contract_variable_qty_prorated @ git+https://github.com/OCA/contract@refs/pull/1365/head#subdirectory=contract_variable_qty_prorated
+odoo-addon-contract_variable_quantity @ git+https://github.com/OCA/contract@refs/pull/1364/head#subdirectory=contract_variable_quantity
