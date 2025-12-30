@@ -1,0 +1,2 @@
+odoo-addon-contract @ git+https://github.com/OCA/contract@refs/pull/1312/head#subdirectory=contract
+odoo-addon-account_invoice_start_end_dates @ git+https://github.com/OCA/account-closing@refs/pull/355/head#subdirectory=account_invoice_start_end_dates
