@@ -52,6 +52,7 @@ patch(SaleOrderLineProductField.prototype, {
     },
 
     get contractContext() {
+        console.log(this.props.record)
         return {
             active_model: this.props.record.resModel,
             active_id: this.props.record.resId,
@@ -112,5 +113,17 @@ patch(SaleOrderLineProductField.prototype, {
                 }
             },
         });
+    },
+    async close(){
+        console.log('CLOSE!')
+    },
+    async onClose(){
+        console.log('onClose')
+    },
+    async dismiss(){
+        console.log('dismiss')
+    },
+    async discardRecord(){
+        console.log('discardRecord')
     },
 });

@@ -6,6 +6,7 @@ export class ProductContractConfiguratorController extends formView.Controller {
     setup() {
         super.setup();
         this.action = useService("action");
+        console.log('this', this)
     }
 
     _getProductContractConfiguration(record) {
@@ -52,6 +53,19 @@ export class ProductContractConfiguratorController extends formView.Controller {
                     this._getProductContractConfiguration(record),
             },
         });
+    }
+
+    async close(){
+        console.log('CLOSE!')
+    }
+    async onClose(){
+        console.log('onClose')
+    }
+    async dismiss(){
+        console.log('dismiss')
+    }
+    async discardRecord(){
+        console.log('discardRecord')
     }
 }
 
