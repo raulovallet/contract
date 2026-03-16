@@ -43,6 +43,7 @@ class ContractLine(models.Model):
         readonly=True,
     )
     product_id = fields.Many2one(index=True)
+    translated_product_name = fields.Text(compute='_compute_translated_product_name')
 
     @api.depends("name", "date_start")
     def _compute_display_name(self):
@@ -291,3 +292,10 @@ class ContractLine(models.Model):
     ):
         self.ensure_one()
         return self.quantity if not self.display_type else 0.0
+
+    @api.depends('product_id')
+    def _compute_translated_product_name(self):
+        for line in self:
+            line.translated_product_name = line.product_id.with_context(
+                lang=line.partner_id.lang,
+            ).display_name
